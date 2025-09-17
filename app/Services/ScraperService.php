@@ -12,7 +12,10 @@ class ScraperService
     public function __construct()
     {
         $this->client = new Client([
-            'timeout'  => 60.0,
+            'timeout'  => 30.0,
+            'headers' => [
+                'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+            ],
         ]);
     }
 
@@ -38,4 +41,3 @@ class ScraperService
         return (float) str_replace(['₹', ','], '', $price);
     }
 }
-
