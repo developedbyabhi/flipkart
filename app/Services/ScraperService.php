@@ -12,7 +12,7 @@ class ScraperService
     public function __construct()
     {
         $this->client = new Client([
-            'timeout'  => 10.0,
+            'timeout'  => 60.0,
         ]);
     }
 
